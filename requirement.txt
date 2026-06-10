@@ -3,3 +3,4 @@ numpy
 langchain-community
 langchain-groq
 scikit-learn
+ipykernel
