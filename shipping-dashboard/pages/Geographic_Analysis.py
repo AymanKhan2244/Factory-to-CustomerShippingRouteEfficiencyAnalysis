@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+# pyrefly: ignore [missing-import]
 from utils.data_loader import load_data
 
 st.title("🌎 Geographic Shipping Analysis")

@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+# pyrefly: ignore [missing-import]
 from utils.data_loader import load_data
 
 st.set_page_config(

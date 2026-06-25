@@ -1,4 +1,5 @@
 import streamlit as st
+# pyrefly: ignore [missing-import]
 from utils.data_loader import load_data
 import matplotlib.pyplot as plt 
 df = load_data()
