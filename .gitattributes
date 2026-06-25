@@ -3,4 +3,5 @@
 *.pt filter=lfs diff=lfs merge=lfs -text
 *.pth filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
+*joblib* filter=lfs diff=lfs merge=lfs -text
 shipping-dashboard/model/CandyDistributerModel_joblib filter=lfs diff=lfs merge=lfs -text
