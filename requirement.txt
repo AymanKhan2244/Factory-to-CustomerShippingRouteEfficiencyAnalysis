@@ -8,3 +8,4 @@ streamlit
 matplotlib
 xgboost
 dotenv
+seaborn 
