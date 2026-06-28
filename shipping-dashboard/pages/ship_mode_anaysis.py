@@ -1,5 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+# pyrefly: ignore [missing-import]
 from utils.data_loader import load_data
 
 st.title("🚚 Ship Mode Performance Analysis")

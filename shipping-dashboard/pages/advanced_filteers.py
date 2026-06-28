@@ -16,9 +16,7 @@ st.markdown("""
 Filter shipment records based on **Date**, **Region**, **State**, **Ship Mode**, and **Lead Time**.
 """)
 
-# ---------------------------------------------------
-# Load Data
-# ---------------------------------------------------
+
 
 df = pd.read_csv("data/cleaned_shipping_data.csv")
 
@@ -27,13 +25,11 @@ df["Order Date"] = pd.to_datetime(
    
 )
 
-# ---------------------------------------------------
-# Sidebar Filters
-# ---------------------------------------------------
+
 
 st.sidebar.header("Filter Shipments")
 
-# Date Range
+
 date_range = st.sidebar.date_input(
     "📅 Date Range",
     value=(
@@ -50,25 +46,26 @@ elif isinstance(date_range, (list, tuple)) and len(date_range) == 1:
 else:
     start_date = df["Order Date"].min()
     end_date = df["Order Date"].max()
-# Region
+
 selected_region = st.sidebar.selectbox(
     "🌍 Region",
     options=["All"] + list(sorted(df["Region"].unique()))
 )
 
-# State
+
+
 selected_state = st.sidebar.selectbox(
     "📍 State",
     options=["All"] + list(sorted(df["State/Province"].unique()))
 )
 
-# Ship Mode
+
 selected_ship_mode = st.sidebar.selectbox(
     "🚚 Ship Mode",
     options=["All"] + list(sorted(df["Ship Mode"].unique()))
 )
 
-# Lead Time Slider
+
 lead_time = st.sidebar.slider(
     "⏱ Lead Time Threshold",
     int(df["Lead_time"].min()),
@@ -76,9 +73,7 @@ lead_time = st.sidebar.slider(
     int(df["Lead_time"].mean())
 )
 
-# ---------------------------------------------------
-# Apply Filters
-# ---------------------------------------------------
+
 
 filtered_df = df[
     (df["Order Date"] >= pd.to_datetime(start_date)) &
@@ -89,9 +84,7 @@ filtered_df = df[
     (df["Lead_time"] >= lead_time)
 ]
 
-# ---------------------------------------------------
-# KPI
-# ---------------------------------------------------
+
 
 st.subheader("📊 Filter Summary")
 
@@ -117,9 +110,7 @@ with col3:
 
 st.divider()
 
-# ---------------------------------------------------
-# Data Preview
-# ---------------------------------------------------
+
 
 st.subheader("📄 Filtered Dataset")
 
@@ -130,9 +121,7 @@ st.dataframe(
 
 st.divider()
 
-# ---------------------------------------------------
-# Ship Mode Distribution
-# ---------------------------------------------------
+
 
 st.subheader("🚚 Ship Mode Distribution")
 
@@ -152,9 +141,7 @@ st.pyplot(fig)
 
 st.divider()
 
-# ---------------------------------------------------
-# Region Distribution
-# ---------------------------------------------------
+
 
 st.subheader("🌍 Region Distribution")
 
@@ -174,9 +161,6 @@ st.pyplot(fig)
 
 st.divider()
 
-# ---------------------------------------------------
-# Lead Time Distribution
-# ---------------------------------------------------
 
 st.subheader("⏱ Lead Time Distribution")
 

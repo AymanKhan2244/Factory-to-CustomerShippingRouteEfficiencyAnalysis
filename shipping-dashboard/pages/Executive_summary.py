@@ -12,7 +12,6 @@ st.set_page_config(
 st.title("📈 Executive Summary")
 st.markdown("High-level overview of Nassau Candy shipping performance.")
 
-# Load data
 df = load_data()
 
 

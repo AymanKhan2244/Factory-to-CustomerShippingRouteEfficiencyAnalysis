@@ -12,10 +12,7 @@ selected_state = st.selectbox(
     "Select State",
     sorted(df['State/Province'].unique())
 )
-#selected_region = st.selectbox(
-    #"Select Region",
-   # sorted(df['Region'].unique())
-#)
+
 
 filtered_df = df[
     df['State/Province'] == selected_state
