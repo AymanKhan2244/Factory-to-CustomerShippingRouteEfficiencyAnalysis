@@ -2,7 +2,10 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+# pyrefly: ignore [missing-import]
+from utils.data_loader import load_data
 
+df = load_data()
 st.set_page_config(
     page_title="Model Performance",
     page_icon="📊",

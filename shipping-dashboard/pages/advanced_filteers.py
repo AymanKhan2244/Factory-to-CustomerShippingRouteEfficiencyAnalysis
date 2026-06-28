@@ -10,6 +10,9 @@ st.set_page_config(
     layout="wide"
 )
 
+
+df = load_data()
+
 st.title("🎛️ Advanced Shipping Filters")
 
 st.markdown("""
@@ -18,7 +21,7 @@ Filter shipment records based on **Date**, **Region**, **State**, **Ship Mode**,
 
 
 
-df = pd.read_csv("data/cleaned_shipping_data.csv")
+
 
 df["Order Date"] = pd.to_datetime(
     df["Order Date"]

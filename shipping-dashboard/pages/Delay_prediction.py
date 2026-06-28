@@ -1,7 +1,10 @@
 import streamlit as st
 import pandas as pd
 import joblib
+# pyrefly: ignore [missing-import]
+from utils.data_loader import load_data
 
+df = load_data()
 model = joblib.load("model/CandyDistributerModel.joblib")
 
 st.title("🤖 Delay Prediction")
