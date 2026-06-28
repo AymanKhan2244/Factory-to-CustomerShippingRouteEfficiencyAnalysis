@@ -12,3 +12,6 @@ def load_data():
     df['Ship Date'] = pd.to_datetime(df['Ship Date'])
 
     return df
+
+
+
