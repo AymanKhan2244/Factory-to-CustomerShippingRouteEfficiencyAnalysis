@@ -400,7 +400,7 @@ Add screenshots of:
 
 **Ayman Khan**
 
-BCA Student | Aspiring Data Scientist & AI Engineer
+BCA Student | Aspiring  AI Engineer
 
 ### Skills
 
