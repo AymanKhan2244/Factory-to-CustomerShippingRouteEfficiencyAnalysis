@@ -3,9 +3,16 @@ import pandas as pd
 import joblib
 # pyrefly: ignore [missing-import]
 from utils.data_loader import load_data
-
+from pathlib import Path
 df = load_data()
-model = joblib.load("model/CandyDistributerModel.joblib")
+
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+MODEL_PATH = BASE_DIR / "model" / "CandyDistributerModel.joblib"
+
+model = joblib.load(MODEL_PATH)
 
 st.title("🤖 Delay Prediction")
 

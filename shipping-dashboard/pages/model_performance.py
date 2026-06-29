@@ -6,6 +6,8 @@ import numpy as np
 from utils.data_loader import load_data
 
 df = load_data()
+
+
 st.set_page_config(
     page_title="Model Performance",
     page_icon="📊",
